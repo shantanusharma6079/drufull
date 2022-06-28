@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/70ed046509.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-200 font-inter">
+    <header class="flex justify-between px-8 py-8 md:px-16">
+        <div>
+            <img src="pictures/drufull.png" alt="logo">
+        </div>
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <div class="relative inline-block text-left md:hidden" x-data="{ isOpen: false}">
+            <div>
+            <button type="button" @click="isOpen = !isOpen" @keydown.escape="isOpen = false" class="inline-flex justify-center w-full px-4 py-2 text-xl font-medium text-purple-800 bg-purple-300 rounded-md shadow-sm hover:bg-purple-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                Home
+                <!-- Heroicon name: solid/chevron-down -->
+                <span class="pl-2 text-2xl">
+                    &darr;
+                </span>
+            </button>
+            </div>
+            <div x-show="isOpen" @click.away="isOpen = false" class="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <div role="none">
+                    <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Home</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Features</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">Products</a>
+                    <div  class="w-full px-4 py-2 text-base font-medium text-white bg-purple-600 hover:bg-purple-800">
+                        <a href="#contact">Contact Us</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="hidden space-x-4 md:flex">
+            <div class="px-10 py-4 text-base font-medium text-black rounded-full hover:bg-purple-200">
+                Home
+            </div>
+            <div class="px-10 py-4 text-base font-medium text-black rounded-full hover:bg-purple-200">
+                Features
+            </div>
+            <div class="px-10 py-4 text-base font-medium text-black rounded-full hover:bg-purple-200">
+                Products
+            </div>
+        </div>
+        <div class="hidden md:flex">
+            <a href="#contact" class="px-10 py-4 text-base font-medium text-white bg-purple-600 border rounded-full hover:text-purple-600 hover:bg-transparent hover:border-purple-600">Contact Us</a>
+        </div>
+    </header>
+    <main>
+        <section class="px-16 md:pl-40 md:px-0 md:flex-row-reverse md:py-20 md:flex">
+            <div class="pl-20 md:flex-1 md:pl-0">
+                <img src="pictures/header img.png" alt="header img" class="w-52 md:w-96">
+            </div>
+            <div class="py-16 text-center md:flex-1 md:pr-60 md:mr-16 md:py-24 md:text-left">
+                <h1 class="inline-block pb-12 text-5xl font-bold md:pb-0 font-montserrat md:text-7xl">Innovation for the <span class="text-purple-500">FUTURE</span></h1>
+                <p class="text-xl font-normal text-gray-500 md:font-medium md:text-lg md:py-10">
+                    Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor. Him had wound use found hoped. Of distrusts immediate enjoyment curiosity do. Marianne saw thoughts the humoured.
+                </p>
+                <div class="py-12 space-y-4 md:space-y-0 md:py-8 md:space-x-4 md:flex">
+                    <button class="w-full px-2 py-4 font-bold text-center text-white bg-purple-600 rounded-full md:flex-1 hover:bg-purple-800">
+                        <a href="#" class="flex w-full pl-10 space-x-2 sm:pl-10">
+                            <span class="text-lg font-bold"><i class="fab fa-google-play"></i></span>
+                            <p class="text-lg font-bold">View Play Store</p>
+                        </a>
+                    </button>
+                    <button class="w-full px-2 py-4 font-semibold text-center text-purple-600 bg-transparent border border-purple-600 rounded-full md:flex-1 hover:text-white hover:bg-purple-800 hover:border-transparent">
+                        <a href="#contact">
+                            <p class="text-lg font-bold">Contact Us</p>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            
+        </section>
+        <div class="hidden ml-16 space-x-2 text-gray-400 md:flex">
+            <div class="w-16 h-16 pt-2 text-3xl text-center border-2 border-gray-400 rounded-full">&darr;</div>
+            <div class="p-4 text-lg font-black">learn more</div>
+        </div>
+        <section class="mx-10 space-y-44 md:my-40 md:space-y-40 md:mx-72">
+            <div class="text-center md:space-x-20 md:text-left md:flex">
+                <div class="w-auto md:w-96 md:mr-16 md:flex-1">
+                    <img src="pictures/main1.png" alt="">
+                </div>
+                <div class="pt-12 md:flex-1">
+                    <h2 class="py-8 text-5xl font-semibold text-black md:text-6xl">Innovation & <span class="text-purple-600">Simplicity</span></h2>
+                    <p class="w-auto text-2xl font-normal md:text-lg md:w-96">Our apps are innovative, informative, easy to navigate. It focuses on interaction and simplicity.</p>
+                </div>
+            </div>
+            <div class="text-center md:text-left md:flex md:flex-row-reverse">
+                <div class="w-auto md:w-96 md:flex-1">
+                    <img src="pictures/main2.png" alt="">
+                </div>
+                <div class="pt-12 md:flex-1">
+                    <h2 class="py-8 text-5xl font-semibold text-black md:text-6xl">Innovation & <span class="text-purple-600">Simplicity</span></h2>
+                    <p class="w-auto text-2xl font-normal md:text-lg md:w-96">Our apps are innovative, informative, easy to navigate. It focuses on interaction and simplicity.</p>
+                </div>
+            </div>
+            <div class="text-center md:space-x-20 md:text-left md:flex">
+                <div class="w-auto md:mr-16 md:w-96 md:flex-1">
+                    <img src="pictures/main3.png" alt="">
+                </div>
+                <div class="pt-12 md:flex-1">
+                    <h2 class="py-8 text-5xl font-semibold text-black md:text-6xl">Innovation & <span class="text-purple-600">Simplicity</span></h2>
+                    <p class="w-auto text-2xl font-normal md:text-lg md:w-96">Our apps are innovative, informative, easy to navigate. It focuses on interaction and simplicity.</p>
+                </div>
+            </div>
+        </section>
+        <section class="pt-16 md:p-0">
+            <h2 class="pt-24 text-6xl font-semibold text-center text-black md:ml-48 md:text-left">Our <span class="text-purple-600">Products</span></h2>
+            <div class="my-16 text-white bg-blue-600 md:flex md:px-56 md:space-x-16">
+                <div class="px-0 pt-16 sm:px-16 lg:px-0 md:pt-0 md:flex-auto">
+                    <div style="background-image: url('pictures/Samsung 2.png');" class="h-screen bg-no-repeat md:h-full">
+                        <img src="pictures/Group 2.png" alt="" class="relative left-36 top-72">
+                    </div>
+                </div>
+                <div class="px-12 py-0 text-center md:py-20 md:px-0 md:w-1/4 md:text-left md:flex-auto">
+                    <h3 class="text-6xl font-semibold">Repost</h3>
+                    <p class="py-12 text-lg leading-9 md:leading-8">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum at aenean curabitur quis bibendum id. Consectetur habitasse eget volutpat integer. Mus non integer gravida enim. Eros, tortor dictum gravida nec id aliquam quisque lacus ornare. Nibh risus massa sem urna. Hac odio libero ridiculus faucibus ipsum in. Fermentum aliquam in neque sit id mauris tellus dolor sed. Convallis quisque vitae id in posuere.
+                    </p>
+                    <div class="py-12 space-y-8 md:space-y-0 md:py-8 md:space-x-4 md:flex">
+                        <button class="w-full px-2 py-4 font-bold text-center text-blue-600 bg-white rounded-full hover:bg-blue-700 hover:text-white md:flex-1">
+                            <a href="#" class="flex w-full pl-10 space-x-2 sm:pl-16">
+                                <span class="text-lg font-bold"><i class="fab fa-google-play"></i></span>
+                                <p class="text-lg font-bold">View Play Store</p>
+                            </a>
+                        </button>
+                        <button class="w-full px-2 py-4 font-semibold text-center text-white bg-transparent border border-white rounded-full md:flex-1 hover:text-white hover:bg-blue-700">
+                            <a href="#contact">
+                                <p class="text-lg font-bold">Contact Us</p>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2 class="text-6xl font-semibold text-center text-black md:pt-24 md:text-left md:ml-48">Contact <span class="text-purple-600">DRUFUL</span></h2>
+            <div class="px-8 py-16 text-center md:flex md:px-56 md:text-left md:py-28">
+                <div class="md:flex-1">
+                    <img src="pictures/contact.png" alt="contact image">
+                </div>
+                <div class="pt-12 md:flex-1">
+                    <p class="text-xl font-normal leading-9 md:font-semibold md:text-lg md:w-10/12">
+                        Druful is dedicated towards providing customer a world-class service. If you are unhappy with any of our service/products(s), then contact us via this form or write us at<br>
+                        <a href="#" class="text-blue-500">info@druful.com</a>.<br>
+                        <br>
+                        Follow us on Instagram, Twitter & Linkedin for latest releases and updates. 
+                    </p>
+                    <div class="py-20 space-x-12">
+                        <div class="inline-block text-3xl text-center text-purple-600 md:text-xl">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="inline-block text-3xl text-center text-purple-600 md:text-xl">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="inline-block text-3xl text-center text-purple-600 md:text-xl">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-4 mx-8 md:py-20 md:flex md:justify-between md:mx-40">
+        <div>
+            <div>
+                <img src="pictures/drufull.png" alt="logo">
+            </div>
+            <div class="mt-6">
+                <p class="text-xl font-medium text-gray-600 md:text-base">Druful is a app developing company that has<br>unique features and has growing mindset.</p>
+            </div>
+            <div class="py-8 space-x-6">
+                <div class="inline-block px-4 py-2 text-2xl text-center text-purple-600 bg-gray-200 rounded-full shadow-lg md:text-lg">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="inline-block px-4 py-2 text-2xl text-center text-purple-600 bg-gray-200 rounded-full shadow-lg md:text-lg">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="inline-block px-4 py-2 text-2xl text-center text-purple-600 bg-gray-200 rounded-full shadow-lg md:text-lg">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <p class="text-2xl text-gray-400 md:text-lg">©2020Druful.inc</p>
+            </div>
+        </div>
+        <div class="hidden mr-8 space-x-20 md:flex">
+            <div class="text-left">
+                <h3 class="py-5 text-lg font-medium">Product</h3>
+                <ul class="space-y-2 text-base font-normal text-gray-500">
+                    <li>
+                        <a href="#">
+                            View Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Repost</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-left">
+                <h3 class="py-5 text-lg font-medium">Engage</h3>
+                <ul class="space-y-2 text-base font-normal text-gray-500">
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms of Services</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-left">
+                <h3 class="py-5 text-lg font-medium">Features</h3>
+                <ul class="space-y-2 text-base font-normal text-gray-500">
+                    <li>
+                        <a href="#">Feature 1</a>
+                    </li>
+                        <li>
+                        <a href="#">Feature 2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
